@@ -1,0 +1,25 @@
+1.To retrieve entire data set
+SELECT * FROM `bigquery-public-data.austin_311.311_service_requests` LIMIT 1000
+2.To retrieve data set where status is closed
+SELECT * FROM `bigquery-public-data.austin_311.311_service_requests` 
+Where status= 'Closed'
+3.To order the data by street name
+SELECT * FROM `bigquery-public-data.austin_311.311_service_requests` 
+Order by street_name
+4.To arrange the close date data in descending order
+SELECT * FROM `bigquery-public-data.austin_311.311_service_requests`
+Order by close_date DESC
+5.To arrange the close date data in ascending order
+SELECT * FROM `bigquery-public-data.austin_311.311_service_requests` 
+order by close_date ASC
+6.To select data set where source is phone
+SELECT * FROM `bigquery-public-data.austin_311.311_service_requests` 
+where source='Phone'
+7.To obtain unique complaint type
+SELECT count(distinct(complaint_type)) FROM `bigquery-public-data.austin_311.311_service_requests` 
+8.To obtain data of maximum longitude
+SELECT Max(longitude) FROM `bigquery-public-data.austin_311.311_service_requests`
+9.To obtain data of minimum latitude
+SELECT Min(latitude)FROM `bigquery-public-data.austin_311.311_service_requests` 
+10.To obtain data of city Austin
+SELECT city='AUSTIN' FROM `bigquery-public-data.austin_311.311_service_requests` 
